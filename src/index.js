@@ -15,12 +15,21 @@ const feeling = (state = '', action) => {
     return state;
 }
 
+const understanding = (state = " ", action) => {
+    switch (action.type) {
+        case "ADD_UNDERSTANDING":
+            return action.payload;
+    }
+    return state;
+}
+
 const storeInstance = createStore(
-    feeling,
+    combineReducers({
+        feeling,
+        understanding,
+    }),
     
-    applyMiddleware(
-        logger
-    )
+    applyMiddleware(logger)
     );
 
 ReactDOM.render(
