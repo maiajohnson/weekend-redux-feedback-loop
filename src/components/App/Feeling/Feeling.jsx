@@ -17,6 +17,7 @@ function Feeling() {
 
     return (
         <div>
+            <h1>How are you feeling today?</h1>
             <form onSubmit={onAddFeeling}>
                 <input
                     type="number"
