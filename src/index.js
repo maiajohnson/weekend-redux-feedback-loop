@@ -7,12 +7,16 @@ import { applyMiddleware, createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
 import logger from "redux-logger";
 
-const count = (state = 0, action) => {
+const feeling = (state = '', action) => {
+    switch (action.type) {
+        case "ADD_FEELING":
+            return action.payload;
+    }
     return state;
 }
 
 const storeInstance = createStore(
-    count,
+    feeling,
     
     applyMiddleware(
         logger
