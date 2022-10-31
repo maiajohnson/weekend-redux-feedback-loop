@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 import { useSelector } from "react-redux";
+import Feeling from './Feeling/Feeling';
 
 function App() {
 
@@ -13,9 +14,9 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <h1 className='App-title'>Feedback!</h1>
-        
-        <h4>Count: {count}</h4>
       </header>
+      <Feeling />
+        <h4>Count: {count}</h4>
     </div>
   );
 }
