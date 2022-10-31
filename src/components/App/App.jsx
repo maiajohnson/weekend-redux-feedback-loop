@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
+import Comments from "../Comments/Comments";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <Feeling />
       <Understanding />
       <Support />
+      <Comments />
         <h4>Count: {count}</h4>
     </div>
   );

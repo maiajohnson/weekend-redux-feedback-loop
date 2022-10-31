@@ -1,28 +1,28 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 
-function Support() {
+function Comments() {
 
     const dispatch = useDispatch();
-    const [supportInput, setSupportInput] = useState(0);
+    const [commentsInput, setCommentsInput] = useState('');
 
-    const onAddSupport = (evt) => {
+    const onAddComments = (evt) => {
         evt.preventDefault();
 
         dispatch({
-            type: "ADD_SUPPORT",
-            payload: supportInput
+            type: "ADD_COMMENTS",
+            payload: commentsInput
         });
     }
 
     return (
         <div>
-            <h1>How well are you being supported?</h1>
-            <form onSubmit={onAddSupport}>
+            <h1>Any comments you want to leave?</h1>
+            <form onSubmit={onAddComments}>
                 <input
-                    type="number"
-                    onChange={evt => setSupportInput(evt.target.value)}
-                    value={supportInput}
+                    type="text"
+                    onChange={evt => setCommentsInput(evt.target.value)}
+                    value={commentsInput}
                 />
                 <button type="submit">NEXT</button>
             </form>
@@ -30,4 +30,4 @@ function Support() {
     )
 }
 
-export default Support;
+export default Comments;
