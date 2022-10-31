@@ -28,7 +28,7 @@ function Review() {
         })
             .then(response => {
                 dispatch({
-                    type: "RESET",
+                    type: "POST_TO_DB",
                 });
 
                 history.push("/success");
